@@ -1,4 +1,3 @@
-// utils/math.ts
 export function cosineSimilarity(a: number[], b: number[]): number {
   if (a.length !== b.length) throw new Error("Vector length mismatch");
   let dot = 0, normA = 0, normB = 0;

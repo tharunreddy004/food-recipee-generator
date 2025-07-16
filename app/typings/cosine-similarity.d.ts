@@ -1,5 +1,3 @@
-// typings/cosine-similarity.d.ts
-
 declare module "cosine-similarity" {
   /**
    * Compute cosine similarity between two vectors.
