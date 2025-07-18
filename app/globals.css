@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -23,4 +24,42 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* @media print {
+  body * {
+    visibility: hidden !important;
+  }
+  .print-recipe, .print-recipe * {
+    visibility: visible !important;
+  }
+  .print-recipe {
+    position: absolute;
+    left: 0; top: 0; width: 100%;
+    background: white;
+    color: black;
+    font-size: 16px;
+    padding: 3rem 2rem;
+    box-shadow: none !important;
+  }
+} */
+
+
+@media print {
+  .print-recipe,
+  .print-recipe * {
+    visibility: visible !important;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+  .print-recipe {
+    position: static !important;
+    padding: 2rem !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+  }
 }
